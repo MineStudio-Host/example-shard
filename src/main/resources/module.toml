@@ -1,5 +1,0 @@
-name = "ExampleShard"
-id = "exampleshard"
-description = "nerd"
-version = "1.0"
-deps = []
