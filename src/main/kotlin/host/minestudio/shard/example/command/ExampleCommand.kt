@@ -25,7 +25,7 @@ class ExampleCommand : ShardCommand() {
     @Subcommand(
         path = "argument",
         description = "An example subcommand with an argument",
-        usage = "/example arg1 <name>",
+        usage = "/example argument <name>",
     )
     fun argument(
         executor: Player,
