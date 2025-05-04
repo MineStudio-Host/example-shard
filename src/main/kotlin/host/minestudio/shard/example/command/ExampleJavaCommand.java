@@ -28,7 +28,7 @@ public class ExampleJavaCommand extends ShardCommand {
     @Subcommand(
             path = "argument",
             description = "Example command with argument",
-            usage = "/example arg1 <name>"
+            usage = "/example argument <name>"
     )
     public void argument(
             Player executor,
