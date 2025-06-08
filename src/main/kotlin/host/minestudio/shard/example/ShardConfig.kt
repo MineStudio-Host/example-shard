@@ -4,6 +4,7 @@ import host.minestudio.frost.api.config.ConfigSchema
 import host.minestudio.frost.api.config.ConfigSection
 import host.minestudio.frost.api.config.InputConfig
 import host.minestudio.frost.api.config.InputSuffix
+import host.minestudio.frost.api.config.InputType
 import host.minestudio.frost.api.config.SelectConfig
 import host.minestudio.frost.api.config.SelectOption
 import host.minestudio.frost.api.config.SettingGroup
@@ -54,7 +55,7 @@ class ShardConfig {
                                     id = "inputField",
                                     label = "Input Field",
                                     description = "Enter some text here",
-                                    inputType = "text", // text, number, email, password, url
+                                    inputType = InputType.TEXT, // text, number, email, password, url
                                     placeholder = "Type something...",
                                     defaultValue = null,
                                     suffix = null,
@@ -65,7 +66,7 @@ class ShardConfig {
                                     id = "numberField",
                                     label = "Number Field",
                                     description = "Enter a number",
-                                    inputType = "number", // text, number, email, password, url
+                                    inputType = InputType.NUMBER, // text, number, email, password, url
                                     placeholder = "0",
                                     defaultValue = null,
                                     suffix = InputSuffix(
