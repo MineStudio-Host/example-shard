@@ -13,6 +13,13 @@ repositories {
 dependencies {
     testImplementation(kotlin("test"))
 
+    
+    // Make sure you check the version on this from the docs.
+    // This may be and probably is outdated. We just depend
+    // on the project internally, and rarely update this value.
+    // So please, do NOT leave this like this. Go find the latest
+    // version. Otherwise, there's about a 9/10 chance this entire
+    // shard breaks. kthx
     compileOnly("host.minestudio:frost-snapshots:39b860741c")
     compileOnly("net.minestom:minestom-snapshots:87f6524aeb")
     compileOnly("com.google.auto.service:auto-service:1.1.1")
