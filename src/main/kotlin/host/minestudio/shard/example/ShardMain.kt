@@ -38,6 +38,15 @@ class ShardMain : Shard() {
          */
 
         publishConfigSchema(ShardConfig().genConfig())
+
+        getStorageService().saveData("example_data", "bootTime", System.currentTimeMillis())
+        getStorageService().getData("example_data", "bootTime").thenAccept { data ->
+            println("Boot time data: $data")
+            getStorageService().deleteData("example_data", "bootTime")
+        }.exceptionally { ex ->
+            logger.emit(LogLevel.ERROR, "Failed to retrieve boot time data: ${ex.message}")
+            null
+        }
     }
 
     override fun delete() {
