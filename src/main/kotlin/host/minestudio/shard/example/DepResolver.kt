@@ -16,18 +16,19 @@ class DepResolver : ShardDependencyLoader() {
             this::class.java,
             Dependency(
                 DefaultArtifact(
-                    "net.minestom:minestom-snapshots:87f6524aeb"
+                    "dev.expx:minestom-invs:1.0.6"
                 ),
                 "compile"
             )
         )
 
         // Add the repositories to be used
-        mavenResolver?.addRepository(
+        // maven central built in
+        /*mavenResolver?.addRepository(
             this::class.java,
             RemoteRepository(
-                "https://repo.maven.apache.org/maven2"
+                "http://repo1.maven.org/maven2"
             )
-        )
+        )*/
     }
 }
