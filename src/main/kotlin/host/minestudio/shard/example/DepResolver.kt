@@ -1,13 +1,10 @@
 package host.minestudio.shard.example
 
-import com.google.auto.service.AutoService
-import host.minestudio.frost.api.dependencies.RemoteRepository
 import host.minestudio.frost.api.dependencies.resolver.MavenResolver
 import host.minestudio.frost.api.shards.ShardDependencyLoader
 import org.eclipse.aether.artifact.DefaultArtifact
 import org.eclipse.aether.graph.Dependency
 
-@AutoService(ShardDependencyLoader::class)
 class DepResolver : ShardDependencyLoader() {
 
     override fun loadDependencies(mavenResolver: MavenResolver?) {

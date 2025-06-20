@@ -1,6 +1,5 @@
 package host.minestudio.shard.example.command;
 
-import com.google.auto.service.AutoService;
 import host.minestudio.frost.api.shards.command.ShardCommand;
 import host.minestudio.frost.api.shards.command.annotation.Argument;
 import host.minestudio.frost.api.shards.command.annotation.Command;
@@ -11,7 +10,6 @@ import net.minestom.server.entity.EntityType;
 import net.minestom.server.entity.Player;
 import org.jetbrains.annotations.NotNull;
 
-@AutoService(Command.class)
 @Command(
         name = "examplejava",
         description = "An example command"

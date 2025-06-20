@@ -1,6 +1,5 @@
 package host.minestudio.shard.example.command
 
-import com.google.auto.service.AutoService
 import host.minestudio.frost.api.shards.command.ShardCommand
 import host.minestudio.frost.api.shards.command.annotation.Argument
 import host.minestudio.frost.api.shards.command.annotation.Command
@@ -10,7 +9,6 @@ import net.minestom.server.command.builder.arguments.minecraft.registry.Argument
 import net.minestom.server.entity.EntityType
 import net.minestom.server.entity.Player
 
-@AutoService(ShardCommand::class)
 @Command(
     name = "example",
     description = "An example command",
