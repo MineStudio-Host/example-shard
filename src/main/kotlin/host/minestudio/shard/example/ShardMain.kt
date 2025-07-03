@@ -4,6 +4,7 @@ import com.google.auto.service.AutoService
 import host.minestudio.frost.api.shards.Shard
 import host.minestudio.frost.api.shards.annotations.ShardConfig
 import host.minestudio.frost.api.shards.enum.LogLevel
+import host.minestudio.shard.example.command.ExampleCommand
 
 @AutoService(Shard::class)
 @ShardConfig(
@@ -15,6 +16,10 @@ import host.minestudio.frost.api.shards.enum.LogLevel
     // deps = ["example-dep"]
 )
 class ShardMain : Shard() {
+
+    override fun presetup() {
+        setDependencyloader(DepResolver())
+    }
 
     override fun create() {
         val logger = getLogEmitter()
@@ -36,6 +41,8 @@ class ShardMain : Shard() {
         logger.error("This is an error message")
         logger.fatal("This is a fatal message")
          */
+
+        registerCommand(ExampleCommand())
 
         publishConfigSchema(ShardConfig().genConfig())
 

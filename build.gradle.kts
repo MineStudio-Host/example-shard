@@ -7,6 +7,7 @@ group = "host.minestudio"
 version = "1.0-SNAPSHOT"
 
 repositories {
+    mavenLocal()
     mavenCentral()
 }
 
@@ -22,6 +23,8 @@ dependencies {
     // shard breaks. kthx
     compileOnly("host.minestudio:frost-snapshots:39b860741c")
     ksp("dev.zacsweers.autoservice:auto-service-ksp:1.2.0")
+
+    compileOnly("dev.expx:minestom-invs:1.0.6")
 }
 
 tasks.test {
